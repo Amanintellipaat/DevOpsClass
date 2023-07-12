@@ -1,0 +1,145 @@
+175  mkdir Gitsession12
+  176  cd Gitsession12/
+  177  git init
+  178  ls
+  179  ls -a
+  180  cd .git/
+  181  ls
+  182  cd .
+  183  ls
+  184  cd ..
+  185  clear
+  186  git branch
+  187  touch 1.txt
+  188  ls
+  189  git status
+  190  git add 1.txt
+  191  git status
+  192  git commit -m " 1.txt "
+  193  git remote add origin git@github.com:Amanintellipaat/git12.git
+  194  git remote -v
+  195  ssh-keygen
+  196  ssh-keygen
+  197  cat /c/Users/anime/.ssh/id_rsa.pub
+  198  git push origin master
+  199  git remote add origin git@github.com:Amanintellipaat/gitAss1.git
+  200  git remote add origin1 git@github.com:Amanintellipaat/gitAss1.git
+  201  git remote -v
+  202  git remove origin1
+  203  git remote remove origin1
+  204  git remote -v
+  205  clear
+  206  git branch
+  207  ls
+  208  rm -r *
+  209  git status
+  210  git add ,
+  211  git add .
+  212  git commit -m " deleted file "
+  213  ls
+  214  clear
+  215   touch main.c
+  216  git add .
+  217  git commit -m " main file "
+  218  git branch f1 && git branch f2
+  219  git branch
+  220  git checkout f1
+  221  touch f1.c
+  222  git add . && git commit -m " f1 file "
+  223  git checkout f2
+  224  ls
+  225  touch f2.c
+  226  git add . && git commit -m " f1 file "
+  227  ls
+  228  git checkout master
+  229  git branch test
+  230  git checkout test
+  231  ls
+  232  git merge f1
+  233  git merge f2
+  234  ls
+  235  git checkout master
+  236  git merge test
+  237  ls
+  238  git checkout -b hotfix
+  239  ls
+  240  touch urgent.c
+  241  git add . && git commit -m " hotfix "
+  242  git checkout master
+  243  git merge hotfix
+  244  git branch
+  245  git push --all
+  246  clear
+  247  ls
+  248  nano main.c
+  249  git add .
+  250  git commit -m " updated main.c in master "
+  251  git branch b1
+  252  git checkout -b b2
+  253  ls
+  254  nano main.c
+  255  git add .
+  256  git commit -m " updated in b2 branch "
+  257  cat main.c
+  258  git checkout b1
+  259  cat main.c
+  260  nano main.c
+  261  git add .
+  262  git commit -m " update in b2 branch "
+  263  git checkout master
+  264  clear
+  265  ls
+  266  cat main.c
+  267  git merge b1
+  268  cat main.c
+  269  git merge b2
+  270  git mergetool --tool=vimdiff
+  271  cat main.c
+  272  history
+  273  clear
+  274  git log
+  275  git bisect start
+  276  ls
+  277  git bisect good
+  278  git bisect good
+  279  git bisect good
+  280  git bisect bad
+  281  git bisect bad
+  282  clear
+  283  git bisect status
+  284  git bisect reset
+  285  clear
+  286  git log
+  287  git cherry-pick b16aea88f0aac007ba6a295508d11ba9706121d7
+  288  git stash
+  289  git cherry-pick b16aea88f0aac007ba6a295508d11ba9706121d7
+  290  git status
+  291  git add. && git commit -m " merge "
+  292  git add . && git commit -m " merge "
+  293  git cherry-pick b16aea88f0aac007ba6a295508d11ba9706121d7
+  294  git status
+  295  git add main.c
+  296  git status
+  297  git commit -m " merge "
+  298  git status
+  299  clear
+  300  git log
+  301  git cherry-pick 33fc0b88d1d820f437691aab21e5f3f89d8af242
+  302  git stash pop
+  303  git merge b2
+  304  git status
+  305  git add main.c
+  306  git status
+  307  git commit -m " 1 "
+  308  git add .
+  309  git status
+  310  git cherry-pick 33fc0b88d1d820f437691aab21e5f3f89d8af242
+  311  git log
+  312  git reset 33fc0b88d1d820f437691aab21e5f3f89d8af242
+  313  git log
+  314  ls
+  315  git revert dd4bad7d6dbd06ae9c1b4f54231aad7ff11ff56e
+  316  ls
+  317  git log
+  318  ls
+  319  history
