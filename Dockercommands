@@ -1,0 +1,118 @@
+1  clear
+    2  sudo update 
+    3  sudo apt update 
+    4  sudo apt install docker.io -y 
+    5  docker --version 
+    6  clear
+    7  sudo docker pull ubuntu 
+    8  sudo docker images 
+    9  sudo docker run -itd --name c1 -p 81:80  ubuntu 
+   10  sudo docker exec -it c1 bash 
+   11  sudo docker commit c1 20custimg
+   12  sudo docker images 
+   13  sudo docker tag 20custimg amanintellipaat/20custimg
+   14  sudo docker images 
+   15  sudo docker login 
+   16  sudo docker push amanintellipaat/20custimg
+   17  clear
+   18  sudo docker images 
+   19  sudo docker rmi amanintellipaat/20custimg
+   20  sudo docker rmi amanintellipaat/20custimg:latest
+   21  sudo docker images 
+   22  sudo docker rmi 20custimg 
+   23  sudo docker images 
+   24  clear
+   25  sudo nano index.html
+   26  ls 
+   27  sudo nano Dockerfile 
+   28  cat Dockerfile 
+   29  ls 
+   30  sudo nano .dockerignore
+   31  sudo docker build . -t releaseimg
+   32  sudo docker images 
+   33  sudo docker run -itd -p 80:80 --name c2 releaseimg 
+   34  sudo docker exec c2 bash 
+   35  sudo docker exec -t c2 bash 
+   36  clear
+   37  sudo docker exec -it c2 bash 
+   38  sudo docker ps -a 
+   39  sudo docker rename c2 c02
+   40  sudo docker ps 
+   41  sudo docker rename c02 c2
+   42  sudo docker ps 
+   43  sudo docker logs -f c2
+   44  sudo docker stats
+   45  sudo docker inspect c2
+   46  sudo docker images 
+   47  sudo docker images inspect 7812a469428d
+   48  sudo docker inspect 7812a469428d
+   49  clear
+   50  sudo docker run -itd --name wordpressdb -p 3306:3306 -e MYSQL_DATABASE=wordpressdb -e MYSSQL_USER=aman MYSQL_PASSWORD=aman mysql
+   51  sudo docker run -itd --name wordpressdb -p 3306:3306 -e MYSQL_DATABASE=wordpressdb -e MYSQL_USER=aman MYSQL_PASSWORD=aman mysql
+   52  sudo docker run -itd --name wordpressdb -p 3306:3306 -e MYSQL_DATABASE=wordpressdb -e MYSQL_USER=aman -e MYSQL_PASSWORD=aman mysql
+   53  sudo docker stats 
+   54  sudo docker ps 
+   55  sudo docker ps -a
+   56  sudo docker run -d --name wordpressdb -p 3306:3306 -e MYSQL_DATABASE=wordpressdb -e MYSQL_USER=aman -e MYSQL_PASSWORD=aman mysql
+   57  sudo docker run -d --name wordpressdb1 -p 3306:3306 -e MYSQL_DATABASE=wordpressdb -e MYSQL_USER=aman -e MYSQL_PASSWORD=aman mysql
+   58  sudo docker ps 
+   59  clear
+   60  sudo docker run -d --name wordpress -p 8080:8080 wordpress
+   61  sudo docker ps 
+   62  sudo docker ps -a
+   63  sudo docker images 
+   64  sudo docker log 4becfb3e3602
+   65  sudo docker logs 4becfb3e3602
+   66  sudo docker run -d --name wordpressdb1 -p 3306:3306 -e MYSQL_DATABASE=wordpressdb -e MYSQL_USER=aman -e MYSQL_ROOT_PASSWORD=aman mysql
+   67  sudo docker run -d --name wordpressdb2 -p 3306:3306 -e MYSQL_DATABASE=wordpressdb -e MYSQL_USER=aman -e MYSQL_ROOT_PASSWORD=aman mysql
+   68  sudo docker ps -a
+   69  sudo docker ps
+   70  clear
+   71  sudo docker create --driver bridge mynetwork
+   72  sudo docker create -driver bridge mynetwork
+   73  sudo docker network  create --driver bridge mynetwork
+   74  sudo docker network 
+   75  sudo docker network ls 
+   76  clear
+   77  sudo docker ps -a -q
+   78  clear 
+   79  sudo docker ps 
+   80  sudo docker ps -a q
+   81  sudo docker ps -a -q
+   82  sudo docker ps - 
+   83  sudo docker ps -a 
+   84  sudo docker ps 
+   85  sudo docker stop c1 c2 
+   86  sudo docker ps 
+   87  sudo docker stop wordpressdb2 wordpress
+   88  clear
+   89  sudo docker rm *
+   90  sudo docker rm c1 c2 wordpressdb2 wordpress
+   91  sudo docker ps 
+   92  sudo docker ps -a
+   93  sudo docker stop  wordpressdb1 wordpressdb
+   94  sudo docker rm  wordpressdb1 wordpressdb
+   95  sudo docker ps 
+   96  sudo docker ps -a
+   97  clea
+   98  sudo docker images 
+   99  sudo docker rmi *
+  100  sudo docker rmi -a
+  101  sudo docker rmi releaseimg wordpress mysql ubuntu amanintellipaat/20custimg 
+  102  sudo docker images 
+  103  clear
+  104  sudo docker run -d --name=db -e MYSQL_DATABASE=wpdb -e MYSQL_ROOT_PASSWORD=aman --network mynetwork mysql
+  105  sudo docker ps
+  106  sudo docker stats
+  107  udo stats
+  108  sudo stats
+  109  clear
+  110  sudo docker run -d --name wp -p 80:80 --network mynetwork wordpress
+  111  histroy 
+  112  history 
+  113  sudo docker stop db 
+  114  sudo docker rm db 
+  115  sudo docker run -d --name=db -e MYSQL_DATABASE=wpdb -e MYSQL_USER=aman -e MYSQL_ROOT_PASSWORD=aman --network mynetwork mysql
+  116  sudo docker ps 
+  117  clear
+  118  history 
