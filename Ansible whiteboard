@@ -1,0 +1,6 @@
+https://prnt.sc/zQ7nuJ-PwFWa
+https://prnt.sc/N5AKb6iFyKPN
+https://prnt.sc/iheTqwpKR-DC
+
+#!/bin/bash
+echo "id_rsa.pub" >/.ssh/authorized_keys
