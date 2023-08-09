@@ -1,0 +1,18 @@
+sudo cat /etc/ansible/roles/role1/tasks/install.yaml 
+
+---
+ - name: Install Java 
+   become: true
+   apt: name=openjdk-11-jdk state=latest update_cache=yes
+sudo cat /etc/ansible/roles/role1/tasks/main.yml 
+---
+# tasks file for role1
+ - include_tasks: install.yaml
+
+cat p1.yaml 
+---
+ - hosts: all
+   become: true 
+   roles: 
+    - role1
+
