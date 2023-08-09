@@ -1,0 +1,19 @@
+Play.yaml for Install Nginx & apache | Deploying custom html page 
+
+---
+ - name: Install Webserver and deploy custom HTML Page 
+   hosts: Apache2
+   become: true
+   tasks: 
+    - name: Install apache2 
+      apt: name=apache2 state=latest
+    - name: Copy index.html 
+      copy: src=/home/ubuntu/playbook/index.html dest=/var/www/html
+ - name: Install Webserver and deploy custom HTML Page 
+   hosts: Nginx
+   become: true
+   tasks: 
+    - name: Install Nginx 
+      apt: name=nginx state=latest
+    - name: Copy index.html 
+      copy: src=/home/ubuntu/playbook/index.html dest=/var/www/html
