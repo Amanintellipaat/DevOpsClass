@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "id_rsa.pub" >> /home/ubuntu/.ssh/authorized_keys
